@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>만남 사이트</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #3498db;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            font-weight: bold;
+            color: silver; /* 또는 다른 원하는 색상 */
+        }
+
+        #imageContainer {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        #imageContainer img {
+            border-radius: 50%;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        #buttonsContainer {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin: 5px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: #fff;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        #chatBox {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-top: 20px;
+        }
+
+        #chatMessages {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            max-height: 200px;
+            overflow-y: auto;
+        }
+
+        #messageInput {
+            width: 70%;
+            padding: 5px;
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>실버즈</h1>
+        <h2>전국의 어르신들이 다 모였다?!</h2>
+    </header>
+    
+    <div id="imageContainer">
+        <img src="https://image-cdn.hypb.st/https%3A%2F%2Fkr.hypebeast.com%2Ffiles%2F2022%2F03%2Fkfc-japan-colonel-sanders-mobile-battery-contest-01.jpg?cbr=1&q=90" alt="KFC 할아버지" width="200">
+    </div>
+
+    <main>
+        <div id="buttonsContainer">
+            <button onclick="location.href='region-friends.html'">지역별 친구 찾기</button>
+            <button onclick="location.href='profile.html'">내 프로필 꾸미기</button>
+            <button onclick="location.href='chat-history.html'">내 채팅 기록 모아보기</button>
+        </div>
+        <div id="chatBox">
+            <h2>채팅</h2>
+            <ul id="chatMessages"></ul>
+            <input type="text" id="messageInput" placeholder="메시지를 입력하세요">
+            <button onclick="sendMessage()">전송</button>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 만남 사이트</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
